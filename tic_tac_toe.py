@@ -71,10 +71,10 @@ def checkIfWin(board):
 def checkTie(board):
     global gameRunning
     if "-" not in board:
-        checkIfWin(board)
-        printboard(board)
-        print("It's a tie!")
-        gameRunning = False
+        if not winner:
+                   printboard(board)
+                   print("It's a tie!")
+                   gameRunning = False
 
 # Switch player
 
